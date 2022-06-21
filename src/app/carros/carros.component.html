@@ -1,11 +1,10 @@
 <h2>Listar e Cadastrar Carros</h2>
 <ul class="carros">
-    <li *ngFor="let carro of carros">
-    <button [class.selected]="carro === selectedCarro" type="button" (click)="onSelect(carro)">
-      <span class="badge">{{carro.id}}</span>
-      <span class="modelo">{{carro.modelo}}</span>
-    </button>
+  <li *ngFor="let carro of carros">
+    <a routerLink="/detail/{{carro.id}}">
+      <span class="badge">{{carro.id}}</span> {{carro.modelo}}
+    </a>
   </li>
 </ul>
+<!-- <app-carro-detail [carro]="selectedCarro"></app-carro-detail> -->
 
-<app-carro-detail [carro]="selectedCarro"></app-carro-detail>

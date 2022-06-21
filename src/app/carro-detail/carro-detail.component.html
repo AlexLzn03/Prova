@@ -1,6 +1,6 @@
 <div *ngIf="carro">
 
-    <h2>{{carro.modelo | uppercase}} Details</h2>
+    <h2>{{carro.modelo | uppercase}} Cadastro</h2>
     <div>id: {{carro.id}}</div>
     <div>
       <label for="carro-modelo">Carro modelo: </label>
@@ -16,5 +16,5 @@
         <label for="carro-anofab">Carro ano de fabricação: </label>
         <input id="carro-anofab" [(ngModel)]="carro.anofab" placeholder="anofab">
     </div>
-  
+    <button type="button" (click)="goBack()">go back</button>
   </div>

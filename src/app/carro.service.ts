@@ -8,10 +8,11 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class CarroService {
-  getCarros():  Observable<Carro[]> {
-    const carros = of(CARROS);
-    return carros;
+  getCarro(id: number): Observable<Carro> {
+    // For now, assume that a hero with the specified `id` always exists.
+    // Error handling will be added in the next step of the tutorial.
+    const carro = CARROS.find(h => h.id === id)!;
+    return of(carro);
   }
-
   constructor() { }
 }

@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarrosComponent } from './carros/carros.component';
 import { FormsModule } from '@angular/forms';
-import { CarroDetailComponent } from './carro-detail/carro-detail.component'; // <-- NgModel lives here
+import { CarroDetailComponent } from './carro-detail/carro-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
     CarrosComponent,
-    CarroDetailComponent
+    CarroDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
