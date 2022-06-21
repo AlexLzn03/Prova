@@ -1,6 +1,6 @@
 export interface Carro {
     id: number;
     modelo: string;
-    preco: number;
+    preco: number; 
     anofab: number;
   }
