@@ -18,7 +18,7 @@ export class CarrosComponent implements OnInit {
   }
 
 getCarros(): void {
-  this.carroService.getCarros()
+  this.carroService.getCarro(12)
       .subscribe(carros => this.carros = carros);
 }
 }
