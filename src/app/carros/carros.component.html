@@ -1,0 +1,29 @@
+<h2>Cadastrar Carros</h2>
+<ul class="carros">
+    <li *ngFor="let carro of carros">
+    <button [class.selected]="carro === selectedCarro" type="button" (click)="onSelect(carro)">
+      <span class="badge">{{carro.id}}</span>
+      <span class="modelo">{{carro.modelo}}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedCarro">
+    <h2>{{selectedCarro.modelo | uppercase}} Details</h2>
+    <div>id: {{selectedCarro.id}}</div>
+    <div>
+      <label for="carro-modelo">Carro modelo: </label>
+      <input id="carro-modelo" [(ngModel)]="selectedCarro.modelo" placeholder="modelo">
+    </div>
+
+    <div>
+        <label for="carro-preco">Carro preco: </label>
+        <input id="carro-preco" [(ngModel)]="selectedCarro.preco" placeholder="preco">
+    </div>
+
+    <div>
+        <label for="carro-anofab">Carro ano de fabricação: </label>
+        <input id="carro-anofab" [(ngModel)]="selectedCarro.anofab" placeholder="anofab">
+    </div>
+
+  </div>

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prova_final_alexsander_lozano';
+  title = 'Alexsander Lozano';
 }
